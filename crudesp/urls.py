@@ -5,7 +5,7 @@ from . import views
 from django.conf import settings
 from django.contrib.staticfiles.urls import static
 
-urlpatterns=[
+urlpatterns=[ 
     path('',views.inicio,name='inicio'),
     path('nosotros',views.nosotros, name='nosotros'),
     #interfaz de creacion
