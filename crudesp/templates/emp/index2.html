@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block titulo %} Empleados {% endblock %}
+
+
+
+{% block contenido %} 
+
+<div class="container">
+   
+
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col"></th>
+            <th scope="col">Correo</th>
+            <th scope="col">Profesion</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for especialista in emp %}   
+        <tr>
+            <th scope="row">{{ especialista.id }}</th>
+            <td>{{ especialista.Nombre }} </td>
+            <td>{{ especialista.Apellido }}</td>
+            <td>
+                <img src="{{ especialista.imagen.url  }}" height="100" />
+               
+            </td>
+            <td>{{ especialista.correo }}</td>
+            <td>{{ especialista.descripcion }}</td>
+            <td><a name="" id="" class="btn btn-info" href="{% url 'editar' especialista.id %}" role="button"></a> Editar</td>
+            <td><a name="" id="" class="btn btn-danger" href="{% url 'eliminar' especialista.id %}" role="button"></a> borrar</td>
+        </tr>
+        {% endfor %}
+    
+        
+        </tbody>
+
+    </table>
+    <div class="div">
+        <a name="" id="" class="btn btn-outline-dark"  href="{% url 'crear' %}" role="button">agregar nuevo especialista</a>
+        
+    </div>
+</div>
+  {% endblock %}

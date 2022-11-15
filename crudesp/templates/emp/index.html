@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block titulo %} Empleados {% endblock %}
+
+
+
+{% block contenido %} 
+
+<div class="container">
+   
+    <div class="row">
+
+        <div class="col border">
+            <p>aqui va alguna informacion de lo que ssea</p>
+        </div>
+        <div class="col border">
+
+            
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col"></th>
+            <th scope="col">Profesion</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for especialista in emp %}   
+        <tr>
+            <th scope="row">{{ especialista.id }}</th>
+            <td>{{ especialista.Nombre }}  {{especialista.Apellido}} </td>
+            <td>{{ especialista.correo }}</td>
+            <td>
+                <img src="{{ especialista.imagen.url  }}" height="100" />
+               
+            </td>
+            
+            <td>{{ especialista.descripcion }}</td>
+        </tr>
+        {% endfor %}
+    
+        
+        </tbody>
+
+    </table>
+
+
+
+        </div>
+        
+        
+    </div>
+
+    
+</div>
+  {% endblock %}

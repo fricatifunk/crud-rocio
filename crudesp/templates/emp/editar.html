@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block titulo %} editar un empleado {% endblock %}
+
+
+
+{% block contenido %} 
+
+
+Formulario para editar empleado
+
+
+<div class="card">
+    <div class="card-header">
+        editar un especialista
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del especialista</h4>
+        
+        {% include 'emp/form.html' %}
+
+
+    </div>
+    <div class="card-footer text-muted">
+       
+    </div>
+</div>
+
+
+
+
+ {% endblock %}

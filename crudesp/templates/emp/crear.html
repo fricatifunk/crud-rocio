@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block titulo %} agregar nuevo empleado {% endblock %}
+
+
+
+{% block contenido %} 
+
+
+Formulario para agregar empleado
+
+
+    <div class="card">
+        <div class="card-header">
+            crear un empleado
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Datos del empleado</h4>
+            
+            {% include 'emp/form.html' %}
+
+
+        </div>
+        <div class="card-footer text-muted">
+           
+        </div>
+    </div>
+
+
+ {% endblock %}
