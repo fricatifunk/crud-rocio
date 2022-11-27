@@ -2,10 +2,14 @@ from xml.dom.minidom import Document
 from django.urls import path
 from . import views
 
+from django.contrib.auth import login
 from django.conf import settings
 from django.contrib.staticfiles.urls import static
 
-urlpatterns=[ 
+
+
+
+urlpatterns=[
     path('',views.inicio,name='inicio'),
     path('nosotros',views.nosotros, name='nosotros'),
     #interfaz de creacion
@@ -14,8 +18,9 @@ urlpatterns=[
     path('emp/crear',views.crearemp, name='crear'),
     path('emp/editar',views.editaremp, name='editar'),
     path('eliminar/<int:id>',views.eliminar, name='eliminar'),
-    path('emp/editar/<int:id>',views.editaremp, name='editar')
-    
+    path('emp/editar/<int:id>',views.editaremp, name='editar'),
+    path('',login,{'template_name': 'inicio.html'},name='login'),
+    path('registro/', views.registro, name='registro')
 
 
 # ahi se agrega lo siguiente para las imagenes

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block titulo %} nosotros {% endblock %}
+
+
+
+{% block contenido %} seccion de nosotrossss 
+<div class="container">
+    <form action="" method="POST">
+        {% csrf_token %} {{form.as_p}}
+        
+        <button class="btn" type="submit">registrarme</button>
+    
+    </form>
+    si ya tienes una cuenta, ve a <a href="">entrar</a>
+    
+    
+
+</div>
+
+
+
+{% endblock %}
