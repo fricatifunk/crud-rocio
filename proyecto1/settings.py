@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'proyecto1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'proyecto',
+        'NAME':'crud-rocio',
         'USER':'root',
         'PASSWORD':'',
         'HOST':'localhost',
@@ -123,8 +123,8 @@ LOGIN_REDIRECT_URL = reverse_lazy('emp')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')] 
+STATIC_URL = 'crudesp/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'crudesp/static')] 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
